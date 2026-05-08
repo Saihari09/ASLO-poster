@@ -1,0 +1,9 @@
+# Keep the GitHub Pages repository focused on the public website.
+*
+!README.md
+!.gitignore
+!docs/
+!docs/**
+
+# macOS metadata
+.DS_Store
