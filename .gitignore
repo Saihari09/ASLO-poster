@@ -7,3 +7,6 @@
 
 # macOS metadata
 .DS_Store
+
+# Local-only backup of pre-redesign poster figures
+docs/assets/_backup_old_figs/

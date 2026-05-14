@@ -5,168 +5,383 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Project resources for an ASLO 2026 poster on the 2024 Prymnesium parvum bloom in the Oder River."
+      content="Companion dashboard for Sai Hariharan's ASLO 2026 poster — IGB Berlin's ODER~SO project on the 2024 Prymnesium parvum bloom in the Oder River."
     >
-    <title>ASLO Poster | Oder River Prymnesium Bloom</title>
+    <meta name="theme-color" content="#0f2a3a">
+    <title>Sai Hariharan | ASLO 2026 — Oder River Prymnesium Bloom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header" aria-label="Site navigation">
-      <a class="brand" href="#top">ASLO Poster</a>
-      <nav>
-        <a href="#figures">Figures</a>
-        <a href="#resources">Resources</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Site navigation">
+        <a class="brand" href="#top">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">
+            <strong>Sai Hariharan</strong>
+            <small>ASLO 2026 · Montreal</small>
+          </span>
+        </a>
+        <nav class="side-nav" aria-label="Sections">
+          <a href="#profile">Profile</a>
+          <a href="#overview">Overview</a>
+          <a href="#methods">Methods</a>
+          <a href="#figures">Poster figures</a>
+          <a href="#team">Team &amp; collaborators</a>
+          <a href="#resources">Resources</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="side-socials" aria-label="Profile links">
+          <!-- EDIT: add ORCID + Google Scholar URLs when ready (not on the resume). -->
+          <a href="https://github.com/Saihari09" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+          <a href="https://www.linkedin.com/in/sai-hariharan" target="_blank" rel="noopener" title="LinkedIn">LinkedIn</a>
+          <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener" title="ORCID (add when available)">ORCID</a>
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener" title="Google Scholar (add when available)">Scholar</a>
+        </div>
+        <p class="side-foot">QR-linked dashboard for the printed poster.</p>
+      </aside>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="page-title">
-        <img
-          class="hero-image"
-          src="assets/bloom-context.png"
-          alt="Poster figure showing bloom context across Oder River sampling sites and time."
-        >
-        <div class="hero-copy">
-          <p class="eyebrow">ASLO 2026 | Montreal</p>
-          <h1 id="page-title">When the river bloomed pink</h1>
-          <p class="lede">
-            A spatiotemporal metagenomic dissection of the 2024
-            <i>Prymnesium parvum</i> bloom on the Oder River, and how 16 months
-            of community and functional change set it up.
-          </p>
-          <div class="hero-actions" aria-label="Primary links">
-            <a href="#figures">View figures</a>
-            <a href="#resources">Project links</a>
+      <main id="top" class="main">
+        <section class="hero" id="profile" aria-labelledby="page-title">
+          <div class="hero-grid">
+            <div class="profile-card">
+              <div class="avatar" aria-hidden="true">
+                <!-- EDIT: drop a square headshot at assets/profile.jpg (recommended ~512x512). Fallback monogram shown until then. -->
+                <img src="assets/profile.jpg" alt="Portrait of Sai Hariharan Sankara Subramanian" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'avatar-fallback',textContent:'SH'}))">
+              </div>
+              <div class="profile-body">
+                <p class="eyebrow">Presenting author</p>
+                <h2 class="profile-name">Sai Hariharan Sankara Subramanian</h2>
+                <p class="profile-affil">Doctoral candidate · IGB Berlin · ODER~SO project</p>
+                <p class="profile-bio">
+                  I'm a bioinformatician and microbial ecologist at the Leibniz Institute
+                  of Freshwater Ecology and Inland Fisheries (IGB Berlin), working under
+                  Prof. Hans-Peter Grossart on the ODER~SO project. My doctoral work
+                  uses spatio-temporal metagenomics — 16 sites × 16 months on the Oder
+                  River, sequenced on Illumina and Nanopore — to understand how the
+                  2022 brackish-water disaster and the 2024 <i>Prymnesium parvum</i>
+                  bloom reshaped microbial community structure and function.
+                </p>
+              </div>
+            </div>
+
+            <div class="hero-copy">
+              <p class="eyebrow">ASLO–SIL 2026 · Aquatic Confluence · Abstract 11626</p>
+              <h1 id="page-title">Did the Oder microbiome change after a toxic <i>Prymnesium parvum</i> bloom?</h1>
+              <p class="poster-title">Metagenomic characterization of microbial community shifts during <i>Prymnesium</i> blooms in the Oder River</p>
+              <p class="lede">
+                Summer 2022. The Oder River. A toxic <i>Prymnesium parvum</i> bloom and
+                more than 500 km of devastation. Two years on, the river is changed —
+                <i>Prymnesium</i> has become a permanent resident with recurrent blooms.
+                This poster asks whether each bloom reorganises the Oder microbiome along
+                reproducible taxonomic, functional and environmental axes — or passes over a
+                stable community.
+              </p>
+              <div class="hero-actions" aria-label="Primary links">
+                <a class="btn btn-primary" href="#figures">View poster figures</a>
+                <a class="btn btn-ghost" href="assets/ASLO-poster.pdf" target="_blank" rel="noopener">Download poster PDF</a>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="overview" aria-label="Project overview">
-        <div>
-          <span class="metric">189</span>
-          <span class="label">hybrid metagenomes</span>
-          <span class="note">16 sites x 16 months, Illumina + Nanopore</span>
-        </div>
-        <div>
-          <span class="metric">6,434</span>
-          <span class="label">dereplicated MAGs</span>
-          <span class="note">from 19,360 raw bins at 95% ANI</span>
-        </div>
-        <div>
-          <span class="metric">12.2 M</span>
-          <span class="label">gene clusters</span>
-          <span class="note">60% eggNOG annotated, 84% Nanopore-supported</span>
-        </div>
-      </section>
+        <section class="stats" id="overview" aria-label="Project overview">
+          <article class="stat-card">
+            <span class="metric">249</span>
+            <span class="label">hybrid metagenomes</span>
+            <span class="note">12 sites · 16 months of sampling · Illumina + Nanopore (Jun 2023 – Sep 2024)</span>
+          </article>
+          <article class="stat-card">
+            <span class="metric">6,434</span>
+            <span class="label">dereplicated MAGs</span>
+            <span class="note">from 19,357 raw bins · CheckM2 · GTDB-Tk · Bakta-annotated</span>
+          </article>
+          <article class="stat-card">
+            <span class="metric">12.2 M</span>
+            <span class="label">gene clusters</span>
+            <span class="note">MMseqs2 linclust · 95% nt · 90% cov · 47% dark-matter during <i>P. parvum</i></span>
+          </article>
+        </section>
 
-      <section class="section about" aria-labelledby="about-title">
-        <div>
-          <p class="eyebrow">Poster summary</p>
-          <h2 id="about-title">Resources for the Oder River bloom project</h2>
-        </div>
-        <p>
-          This page collects the poster figures, project updates, and links to
-          code or data releases. The QR code on the printed poster can point to
-          this stable GitHub Pages URL while the contents here remain editable.
-        </p>
-      </section>
+        <section class="section about" aria-labelledby="about-title">
+          <div class="section-heading">
+            <p class="eyebrow">About the poster</p>
+            <h2 id="about-title">Successive blooms across 16 months on the Oder</h2>
+          </div>
+          <p class="prose">
+            The poster traces the Oder River microbiome through a succession of distinct
+            blooms — a <strong>Summer–Autumn 2023 cyanobacterial bloom</strong>, a
+            <strong>Winter 2023/24 baseline</strong>, the
+            <strong>June 2024 <i>Prymnesium parvum</i> bloom</strong>, and the
+            <strong>September 2024 <i>Microcystis</i> bloom</strong> — over
+            <strong>16 months of continuous sampling</strong>. Using a hybrid
+            Illumina + Nanopore design (HybridSPAdes assemblies, FAIRY → MetaBAT2
+            binning, CheckM2 / GTDB-Tk / Bakta, and an MMseqs2 linclust gene catalog),
+            it asks whether each bloom period reshapes the microbiome along
+            reproducible taxonomic, functional and environmental axes. The figures
+            below are taken directly from the printed poster and grouped by its four
+            guiding questions — click any of them to zoom and pan.
+          </p>
+        </section>
 
-      <section class="section" id="figures" aria-labelledby="figures-title">
-        <div class="section-heading">
-          <p class="eyebrow">Figures</p>
-          <h2 id="figures-title">Poster plots</h2>
-        </div>
-        <div class="figure-grid">
-          <article class="figure-card wide">
-            <a href="assets/bloom-context.png">
-              <img src="assets/bloom-context.png" alt="Bloom context figure preview.">
-            </a>
-            <div>
-              <h3>Bloom context</h3>
-              <p>Sampling, timing, and environmental setting for the 2024 bloom.</p>
+        <section class="section methods" id="methods" aria-labelledby="methods-title">
+          <div class="section-heading">
+            <p class="eyebrow">Methods</p>
+            <h2 id="methods-title">Bioinformatic workflow at a glance</h2>
+            <p class="section-sub">From 249 samples to 6,434 dereplicated MAGs and a 12.2 M-cluster gene catalog. Click for the full-resolution diagram.</p>
+          </div>
+          <article class="figure-card methods-card">
+            <button class="figure-trigger" data-lightbox data-src="assets/methods-flow.png" data-caption="ODER~SO bioinformatics pipeline — sample + environmental metadata (249 samples · site × month) → raw reads (Illumina 188 PE + Nanopore 190 SE, ENA project PRJEB111405) → QC (fastp + Porechop/NanoFilt) → parallel branches: Prymnesium read mapping, read-level taxonomy (Kraken2 plusPF), marker-gene profiling (mOTUs v3.1), hybrid assembly (metaSPAdes v4.2). Binning (FAIRY + MetaBAT2 + MaxBin2/CONCOCT refined by DAS_Tool, 19,357 bins) → CheckM2 + MIMAG filter (HQ 438, MQ 2,869, LQ 16,050) → dRep v3.5.0 (3,307 HQ+MQ → 6,434 reps) → Bakta v1.9.2 annotation (5.86 M CDSs, 40,726 tRNAs, 1,280 rRNAs). Gene catalog via Prodigal + MMseqs2 linclust (95% nt · 80% cov), per-sample functional profile via eggNOG-mapper v2.1.12, MAG abundance via CoverM v0.7." aria-label="Open figure: bioinformatic methods flow diagram">
+              <img src="assets/methods-flow.png" alt="ODER~SO bioinformatics workflow flowchart." loading="lazy">
+              <span class="figure-zoom" aria-hidden="true">⤢</span>
+            </button>
+            <div class="figure-meta">
+              <h4>Sample metadata · sequencing · taxonomy · MAGs · gene catalog</h4>
+              <p>
+                A hybrid Illumina + Nanopore workflow built around <strong>HybridSPAdes</strong> assemblies,
+                <strong>FAIRY → MetaBAT2</strong> binning, <strong>CheckM2 + GTDB-Tk + Bakta</strong> on the MAGs,
+                and an <strong>MMseqs2 linclust</strong> gene catalog. Reads, taxonomy, MAGs and functional profiles
+                feed the four poster questions below.
+              </p>
             </div>
           </article>
-          <article class="figure-card">
-            <a href="assets/rda-poster-ready.png">
-              <img src="assets/rda-poster-ready.png" alt="RDA ordination plot preview.">
-            </a>
-            <div>
-              <h3>Community ordination</h3>
-              <p>Multivariate structure across sites, periods, and bloom phases.</p>
-            </div>
-          </article>
-          <article class="figure-card">
-            <a href="assets/functional-shift.png">
-              <img src="assets/functional-shift.png" alt="Functional shift plot preview.">
-            </a>
-            <div>
-              <h3>Functional shift</h3>
-              <p>Gene-catalog changes between bloom and warm-season background states.</p>
-            </div>
-          </article>
-          <article class="figure-card">
-            <a href="assets/umap-annotated.png">
-              <img src="assets/umap-annotated.png" alt="Annotated UMAP plot preview.">
-            </a>
-            <div>
-              <h3>Gene-catalog UMAP</h3>
-              <p>Functional neighborhoods and bloom-associated annotations.</p>
-            </div>
-          </article>
-          <article class="figure-card">
-            <a href="assets/dark-metabolism.png">
-              <img src="assets/dark-metabolism.png" alt="Dark metabolism plot preview.">
-            </a>
-            <div>
-              <h3>Dark metabolism</h3>
-              <p>Unannotated and poorly characterized functional signals.</p>
-            </div>
-          </article>
-          <article class="figure-card wide">
-            <a href="assets/putative-associations.png">
-              <img src="assets/putative-associations.png" alt="Putative associations figure preview.">
-            </a>
-            <div>
-              <h3>Putative associations</h3>
-              <p>Candidate ecological links among <i>Prymnesium</i>, MAGs, and functions.</p>
-            </div>
-          </article>
-        </div>
-      </section>
+        </section>
 
-      <section class="section resources" id="resources" aria-labelledby="resources-title">
-        <div class="section-heading">
-          <p class="eyebrow">Project links</p>
-          <h2 id="resources-title">Add links here as they become available</h2>
-        </div>
-        <div class="resource-list">
-          <a href="#" aria-disabled="true">
-            <span>Poster PDF</span>
-            <small>Coming soon</small>
-          </a>
-          <a href="#" aria-disabled="true">
-            <span>Code repository</span>
-            <small>Coming soon</small>
-          </a>
-          <a href="#" aria-disabled="true">
-            <span>Data release</span>
-            <small>Coming soon</small>
-          </a>
-          <a href="#" aria-disabled="true">
-            <span>Extended figures</span>
-            <small>Coming soon</small>
-          </a>
-        </div>
-      </section>
-    </main>
+        <section class="section figures" id="figures" aria-labelledby="figures-title">
+          <div class="section-heading">
+            <p class="eyebrow">Poster figures</p>
+            <h2 id="figures-title">Walk through the poster, question by question</h2>
+            <p class="section-sub">Four guiding questions, six figures, all lifted straight from the printed poster. Click any figure to zoom and pan.</p>
+          </div>
 
-    <footer class="site-footer" id="contact">
-      <div>
-        <strong>Sai</strong>
-        <span>ODER-SO consortium</span>
+          <article class="q-block">
+            <header class="q-head">
+              <span class="q-num">Q1</span>
+              <div>
+                <h3 class="q-title">Did the Oder microbiome change after a toxic <i>Prymnesium parvum</i> bloom?</h3>
+                <p class="q-sub">Introduction &amp; methods — bloom transition timeline and the hybrid metagenomic pipeline.</p>
+              </div>
+            </header>
+            <div class="figure-grid">
+              <article class="figure-card wide">
+                <button class="figure-trigger" data-lightbox data-src="assets/bloom-context.png" data-caption="Bloom transition timeline + pipeline — Summer-Autumn 2023 cyanobacterial bloom · Winter 2023/24 baseline · June 2024 Prymnesium bloom · September 2024 Microcystis bloom. 249 samples → 188 assemblies → 19,357 bins → 6,434 dRep MAGs → 12.2 M gene clusters." aria-label="Open figure: Bloom timeline and pipeline">
+                  <img src="assets/bloom-context.png" alt="Bloom transition timeline and processing pipeline." loading="lazy">
+                  <span class="figure-zoom" aria-hidden="true">⤢</span>
+                </button>
+                <div class="figure-meta">
+                  <h4>Bloom transition timeline &amp; processing pipeline</h4>
+                  <p>Four bloom regimes between Jun 2023 and Sep 2024, processed via HybridSPAdes → FAIRY/MetaBAT2 → dRep → MMseqs2 linclust.</p>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <article class="q-block">
+            <header class="q-head">
+              <span class="q-num">Q2</span>
+              <div>
+                <h3 class="q-title">Which microbes track <i>Prymnesium</i> — and what do they encode?</h3>
+                <p class="q-sub">db-RDA on Bray–Curtis phylum distances against environment + bloom + microscopy vectors.</p>
+              </div>
+            </header>
+            <div class="figure-grid">
+              <article class="figure-card wide">
+                <button class="figure-trigger" data-lightbox data-src="assets/rda-poster-ready.png" data-caption="Bloom-associated community gradients. db-RDA: n=191 · adj. R²=35.8% · F=7.24 · p=0.002 (999 perms). CAP1 (19.0%) + CAP2 (12.3%) capture 31.3% variance — distinct ecological states. TN, NO3-N, SRP fall during blooms; pH + Chl-a + Salinity + TP define the bloom axis." aria-label="Open figure: Bloom-associated community gradients">
+                  <img src="assets/rda-poster-ready.png" alt="db-RDA ordination of bloom-associated community gradients." loading="lazy">
+                  <span class="figure-zoom" aria-hidden="true">⤢</span>
+                </button>
+                <div class="figure-meta">
+                  <h4>Bloom-associated community gradients</h4>
+                  <p>31.3% variance on CAP1 + CAP2; TN / NO3-N / SRP drop during blooms; pH + Chl-a + Salinity + TP form the bloom axis. <em>adj. R² = 35.8%, p = 0.002.</em></p>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <article class="q-block">
+            <header class="q-head">
+              <span class="q-num">Q3</span>
+              <div>
+                <h3 class="q-title">Do bloom periods reorganise the river microbiome?</h3>
+                <p class="q-sub">Sampling map and time series first, then genus-level winners/losers and the top-50 <i>Prymnesium</i>-correlated MAGs with their encoded capacity.</p>
+              </div>
+            </header>
+            <div class="figure-grid">
+              <article class="figure-card wide">
+                <button class="figure-trigger" data-lightbox data-src="assets/putative-results.png" data-caption="(A) Cyanobacterial &amp; Microcystis MAGs species-level read coverage along the main channel — Cyano 2023 and Microcystis 2024 events highlighted. (B) Prymnesium parvum relative abundance from Illumina + Nanopore, mean ± SD across main-channel sites. (C) mOTU genus richness per sample, mean ± SD across main-channel sites — peaks in Winter 2023/24 and collapses during Prymnesium." aria-label="Open figure: Sampling map and bloom time series">
+                  <img src="assets/putative-results.png" alt="Sampling map and time series of cyano + Prymnesium abundance and mOTU richness." loading="lazy">
+                  <span class="figure-zoom" aria-hidden="true">⤢</span>
+                </button>
+                <div class="figure-meta">
+                  <h4>Sampling map &amp; bloom time series</h4>
+                  <p>12 main-channel sites sampled monthly; <i>Prymnesium</i> abundance peaks in June 2024; <strong>mOTU genus richness collapses during <i>Prymnesium</i> blooms and recovery is repressed</strong>.</p>
+                </div>
+              </article>
+              <article class="figure-card wide">
+                <button class="figure-trigger" data-lightbox data-src="assets/putative-associations.png" data-caption="Top 15 ↑ + bottom 15 ↓ genera by Spearman r vs Prymnesium · Top 50 Prymnesium-correlated MAGs with phylogeny + per-MAG capacity. Oligotrophs (LD12, acIV-A, PnecC) collapse; Roseobacter-clade phycosphere guild rises. B12 salvage + phosphate scavenging dominate; polysaccharide degradation along the Bacteroidota arc; C1 metabolism + B12 biosynthesis along the α-proteobacterial arc." aria-label="Open figure: Genera and MAGs tracking Prymnesium">
+                  <img src="assets/putative-associations.png" alt="Top genera and Prymnesium-correlated MAGs." loading="lazy">
+                  <span class="figure-zoom" aria-hidden="true">⤢</span>
+                </button>
+                <div class="figure-meta">
+                  <h4>Genera &amp; MAGs that track <i>Prymnesium</i></h4>
+                  <p>Oligotrophs (LD12, acIV-A, PnecC) collapse; Roseobacter-clade phycosphere guild rises. B12 salvage + phosphate scavenging dominate the response, with polysaccharide degradation along the Bacteroidota arc and C1 metabolism + B12 biosynthesis along the α-proteobacterial arc.</p>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <article class="q-block">
+            <header class="q-head">
+              <span class="q-num">Q4</span>
+              <div>
+                <h3 class="q-title">How much of the microbiome response is hidden beyond known functions?</h3>
+                <p class="q-sub">A functional view: COG-UMAP, monthly KO-profile trajectory, and the share of bloom-enriched gene clusters with no eggNOG annotation.</p>
+              </div>
+            </header>
+            <div class="figure-grid">
+              <article class="figure-card">
+                <button class="figure-trigger" data-lightbox data-src="assets/umap-annotated.png" data-caption="COG-functional UMAP of the gene catalog, with enriched COG categories per cluster. Bloom states occupy distinct functional space; eukaryotic functions dominate the Prymnesium bloom cluster." aria-label="Open figure: COG-functional UMAP">
+                  <img src="assets/umap-annotated.png" alt="COG-functional UMAP." loading="lazy">
+                  <span class="figure-zoom" aria-hidden="true">⤢</span>
+                </button>
+                <div class="figure-meta">
+                  <h4>COG-functional UMAP</h4>
+                  <p>Bloom states occupy distinct functional space; eukaryotic functions dominate the <i>Prymnesium</i> cluster.</p>
+                </div>
+              </article>
+              <article class="figure-card">
+                <button class="figure-trigger" data-lightbox data-src="assets/functional-shift.png" data-caption="Microbiome functional trajectory shifts during bloom succession. PC1 captures 31.1% of functional variation and tracks monthly KO-profile shifts. Large jumps mark regime shifts; the Prymnesium bloom occupies a distinct functional state." aria-label="Open figure: Functional trajectory">
+                  <img src="assets/functional-shift.png" alt="Functional trajectory across bloom succession." loading="lazy">
+                  <span class="figure-zoom" aria-hidden="true">⤢</span>
+                </button>
+                <div class="figure-meta">
+                  <h4>Functional trajectory through bloom succession</h4>
+                  <p>PC1 captures 31.1% of functional variation; large jumps mark regime shifts; <i>Prymnesium</i> sits in a distinct functional state.</p>
+                </div>
+              </article>
+              <article class="figure-card wide">
+                <button class="figure-trigger" data-lightbox data-src="assets/dark-metabolism.png" data-caption="Share of top-TPM gene clusters with no eggNOG annotation: Winter baseline 18.0% · Summer 2023 28.2% · Microcystis bloom 25.1% · Prymnesium bloom 46.9% (+29 pp · 2.6× the winter baseline). Bloom response is dominated by uncharacterized genes." aria-label="Open figure: Functional dark matter during blooms">
+                  <img src="assets/dark-metabolism.png" alt="Share of top-TPM gene clusters with no eggNOG annotation." loading="lazy">
+                  <span class="figure-zoom" aria-hidden="true">⤢</span>
+                </button>
+                <div class="figure-meta">
+                  <h4>Functional dark matter peaks during <i>Prymnesium</i></h4>
+                  <p>Top-TPM clusters with <em>no</em> eggNOG annotation: <strong>18.0%</strong> winter baseline → <strong>28.2%</strong> Summer 2023 → <strong>25.1%</strong> <i>Microcystis</i> → <strong>46.9%</strong> <i>Prymnesium</i>. The bloom response is dominated by uncharacterised genes — +29 pp, 2.6× baseline.</p>
+                </div>
+              </article>
+            </div>
+          </article>
+
+          <aside class="conclusion-callout" aria-label="Conclusion">
+            <p class="eyebrow">Conclusion</p>
+            <p>
+              During the June 2024 <i>Prymnesium</i> bloom the Oder microbiome reorganised
+              along environmental and taxonomic axes — freshwater oligotrophs (LD12, acIV-A,
+              PnecC) collapsed while an α-proteobacterial phycosphere guild rose,
+              scavenging B12 and phosphate. ~47% of bloom-enriched gene clusters carry
+              <strong>no</strong> functional annotation — functional dark matter, 2.6× the
+              winter baseline.
+            </p>
+          </aside>
+        </section>
+
+        <section class="section team" id="team" aria-labelledby="team-title">
+          <div class="section-heading">
+            <p class="eyebrow">Team &amp; collaborators</p>
+            <h2 id="team-title">The people behind ODER~SO</h2>
+            <p class="section-sub">This work is only possible thanks to the supervisor, co-investigators and the wider ODER~SO consortium.</p>
+          </div>
+
+          <div class="team-grid">
+            <article class="team-card supervisor">
+              <p class="role-tag">Supervisor</p>
+              <h3>Prof. Dr. Hans-Peter Grossart</h3>
+              <p class="affil">IGB Berlin · Aquatic Microbial Ecology</p>
+            </article>
+
+            <article class="team-card">
+              <p class="role-tag">Collaborator</p>
+              <h3>Michael T. Monaghan</h3>
+              <p class="affil">IGB Berlin</p>
+            </article>
+            <article class="team-card">
+              <p class="role-tag">Collaborator</p>
+              <h3>Jan Köhler</h3>
+              <p class="affil">IGB Berlin</p>
+            </article>
+            <article class="team-card">
+              <p class="role-tag">Collaborator</p>
+              <h3>Daniel Wewer</h3>
+              <p class="affil">ODER~SO project</p>
+            </article>
+            <article class="team-card">
+              <p class="role-tag">Collaborator</p>
+              <h3>Danny Ionescu</h3>
+              <p class="affil">TU Berlin</p>
+            </article>
+            <article class="team-card">
+              <p class="role-tag">Collaborator</p>
+              <h3>Mina Bižić</h3>
+              <p class="affil">TU Berlin</p>
+            </article>
+          </div>
+
+          <p class="prose team-foot">
+            And the entire ODER~SO consortium — field, lab, sequencing, modelling and
+            outreach colleagues across IGB Berlin and partner institutions whose work
+            this poster builds on.
+          </p>
+        </section>
+
+        <section class="section resources" id="resources" aria-labelledby="resources-title">
+          <div class="section-heading">
+            <p class="eyebrow">Project links</p>
+            <h2 id="resources-title">Releases and supplementary material</h2>
+            <p class="section-sub">EDIT: swap the placeholder hrefs as artifacts go live.</p>
+          </div>
+          <div class="resource-list">
+            <a href="assets/ASLO-poster.pdf" target="_blank" rel="noopener">
+              <span>Poster PDF</span>
+              <small>Abstract 11626 · ASLO–SIL 2026</small>
+            </a>
+            <a href="https://github.com/Saihari09" target="_blank" rel="noopener">
+              <span>Code repository</span>
+              <small>GitHub @Saihari09</small>
+            </a>
+            <a href="#" aria-disabled="true">
+              <span>Data release</span>
+              <small>Coming soon</small>
+            </a>
+            <a href="https://www.igb-berlin.de/en/oder-so" target="_blank" rel="noopener">
+              <span>ODER~SO project</span>
+              <small>IGB Berlin programme page</small>
+            </a>
+          </div>
+        </section>
+
+        <footer class="site-footer" id="contact">
+          <div class="footer-id">
+            <strong>Sai Hariharan Sankara Subramanian</strong>
+            <span>IGB Berlin · ODER~SO project · ASLO 2026, Montreal</span>
+          </div>
+          <a class="footer-mail" href="mailto:saihariharan_ps@hotmail.com">saihariharan_ps@hotmail.com</a>
+        </footer>
+      </main>
+    </div>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Figure viewer">
+      <button class="lb-close" type="button" aria-label="Close (Esc)">×</button>
+      <button class="lb-prev" type="button" aria-label="Previous figure (←)">‹</button>
+      <button class="lb-next" type="button" aria-label="Next figure (→)">›</button>
+      <div class="lb-stage">
+        <img class="lb-img" alt="">
       </div>
-      <a href="mailto:yo.pras@gmail.com">yo.pras@gmail.com</a>
-    </footer>
+      <div class="lb-caption" aria-live="polite"></div>
+      <div class="lb-hint">scroll / pinch to zoom · drag to pan · double-click to reset</div>
+    </div>
+
+    <script src="lightbox.js" defer></script>
   </body>
 </html>
